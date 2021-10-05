@@ -10,12 +10,12 @@ def rashi():
     event_div = soup.find_all("div", class_ = "events")
      
     for time in time_div:
-       request_time = time.find("span")
+       request_time = time.find("param")
        timevalue = request_time.text.strip()
        print(timevalue)
 
     for date in date_div:
-       request_date = date.find("span", class_= "nep")
+       request_date = date.find("param", class_= "nep")
        datevalue = request_date.text.strip()
        print(datevalue)
     
